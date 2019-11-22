@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageContent.master.cs" Inherits="WebVehicles.Forms.Shared.PageContent" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Eddie Alfaro - Software Developer">
+    <meta name="description" content="Vehicular System Website">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Content/img/favicon.ico" />
+    <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
+    <!--
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Content/css/font-awesome.min.css" rel="stylesheet" />
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <asp:ContentPlaceHolder ID="CustomStyle" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+  
+    <div class="container" id="app">
+        <header></header>
+        <nav id="navbar">
+            <a class="navbar-brand">
+                <img src="../../Content/img/rvLogo.png" class="d-inline-block align-top vlogo" alt="Logo de RV Registro Vehicular - Freedom S.A" />
+                Registro Vehicular
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navPages" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navPages">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.aspx"><span class="fa fa-home"></span> Volver</a>
+                    </li> 
+                </ul>
+                <ul class="navbar-nav my-2">  
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-user-circle-o"></span> <asp:Label ID="username" runat="server"></asp:Label>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navUser">
+                            <a class="dropdown-item" href="Profile.aspx"><span class="fa fa-drivers-license-o"></span> Perfil</a>
+                            <a class="dropdown-item" href="Userslog.aspx"><span class="fa fa-list"></span> Actividad</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="messages"></div>
+        <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+
+        <footer></footer>
+    </div>
+    <!-- 
+    <script src="../../Content/js/jquery-3.3.1.min.js"></script>
+    <script src="../../Content/js/popper.min.js"></script>
+    <script src="../../Content/js/bootstrap.min.js"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+    <asp:ContentPlaceHolder ID="CustomScript" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
